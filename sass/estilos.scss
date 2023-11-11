@@ -1,0 +1,112 @@
+@use "variables.scss" as v;
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    background-color: v.$color-fondo;
+    color: v.$color-primario
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-cards{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-flow: column wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+.card{
+    width: 375px;
+    min-width: 300px;
+    min-height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: v.$color-secundario;
+    padding: {
+        top: 3rem;
+        bottom: 3rem;
+    }
+    +.second{
+        background-color: v.$color-terciario;
+    }
+    +.third{
+        background-color: v.$color-terciario-oscuro;
+    }
+    .card-item{
+        @include v.flex-start();
+        &.title{
+            align-self: start;
+            justify-content: flex-start;
+        }
+        &.p{
+            min-height: 120px;
+            justify-content: flex-start;
+            margin-top: -1rem;
+        }
+        h2{
+            font-family: v.$fuente-titulo;
+            font-size: 3rem;
+            text-transform: uppercase;
+           
+        }
+        button{
+            background-color: v.$color-primario;
+            border: 3px solid v.$color-primario;
+            padding: 1rem 2rem;
+            color: v.$color-secundario;
+            font-family: v.$fuente-texto;
+            border-radius: 60px;
+            &:hover{
+                background-color: transparent;
+                cursor: pointer;
+                color: v.$color-primario;
+                transition: {
+                    duration: 300ms;
+                    property: all;
+                    timing-function: ease-in;
+                };
+                
+            }
+            &.second{
+                color: v.$color-terciario;
+                &:hover{
+                    color: v.$color-primario
+                }
+            }
+            &.third{
+                color: v.$color-terciario-oscuro;
+                &:hover{
+                    color: v.$color-primario
+                }
+            }
+           
+        }
+    }
+}
+    
+@media (min-width: 768px){
+    .container-cards{
+        flex-flow: row wrap;
+        min-height: 500px;
+        border-radius: 10px;
+        margin-top: 0;
+    }
+}
+

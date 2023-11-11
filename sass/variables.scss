@@ -1,0 +1,19 @@
+$fuente-texto: 'Lexend Deca', sans-serif;
+$fuente-titulo: 'Big Shoulders Display', cursive;
+$color-fondo: hsl(0, 0%, 95%);
+$color-secundario: hsl(30, 77%, 52%) ;
+$color-terciario: hsl(185, 99%, 23%);
+$color-terciario-oscuro: hsl(180, 100%,13%);
+$color-primario: hsl(0, 8%, 95%);
+
+@mixin flex-start {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-flow: column wrap;
+    padding: {
+        left: 3.43rem;
+        right: 3.43rem;
+          } 
+   
+}

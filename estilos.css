@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 8%, 95%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container-cards {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-flow: column wrap;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  width: 375px;
+  min-width: 300px;
+  min-height: 500px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: hsl(30, 77%, 52%);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.card + .second {
+  background-color: hsl(185, 99%, 23%);
+}
+.card + .third {
+  background-color: hsl(180, 100%, 13%);
+}
+.card .card-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-flow: column wrap;
+  padding-left: 3.43rem;
+  padding-right: 3.43rem;
+}
+.card .card-item.title {
+  align-self: start;
+  justify-content: flex-start;
+}
+.card .card-item.p {
+  min-height: 120px;
+  justify-content: flex-start;
+  margin-top: -1rem;
+}
+.card .card-item h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.card .card-item button {
+  background-color: hsl(0, 8%, 95%);
+  border: 3px solid hsl(0, 8%, 95%);
+  padding: 1rem 2rem;
+  color: hsl(30, 77%, 52%);
+  font-family: "Lexend Deca", sans-serif;
+  border-radius: 60px;
+}
+.card .card-item button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: hsl(0, 8%, 95%);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: ease-in;
+}
+.card .card-item button.second {
+  color: hsl(185, 99%, 23%);
+}
+.card .card-item button.second:hover {
+  color: hsl(0, 8%, 95%);
+}
+.card .card-item button.third {
+  color: hsl(180, 100%, 13%);
+}
+.card .card-item button.third:hover {
+  color: hsl(0, 8%, 95%);
+}
+
+@media (min-width: 768px) {
+  .container-cards {
+    flex-flow: row wrap;
+    min-height: 500px;
+    border-radius: 10px;
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
